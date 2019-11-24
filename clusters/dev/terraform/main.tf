@@ -53,7 +53,7 @@ resource "google_container_node_pool" "jx-node-pool" {
   name       = "default-pool"
   zone       = "${var.gcp_zone}"
   cluster    = "${google_container_cluster.jx-cluster.name}"
-  node_count = "${var.min_node_count}"
+  # node_count = "${var.min_node_count}"
 
   node_config {
     preemptible  = "${var.node_preemptible}"
